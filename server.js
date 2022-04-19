@@ -1,6 +1,9 @@
 const express = require('express');
 let app = express();
 
+const host = '0.0.0.0';
+const port = process.env.PORT || 3000;
+
 app.set("views","./public/views");
 app.set('view engine','pug');
 
@@ -28,6 +31,9 @@ app.get('/projects/algorithm-visualization', function (req, res, next) {res.rend
 app.get('/projects/algorithm-visualization/dijkstra-algorithm', function (req, res, next) {res.render('pages/dijkstra-algorithm'); });
 
 //This is a shorthand way of creating/initializing the HTTP server
-app.listen(process.env.PORT || 3000);
-console.log("Server listening at http://localhost:3000");
+
+app.listen(port,host,function(){
+    console.log("Server Has Started.......");
+});
+
 //console.sdfg
