@@ -18,8 +18,7 @@ div#image{
 
 /*MIDDLE*/
 /*div for middle section*/
-div#categories{
-    border: solid;
+div#categories {
     display: flex;
     flex-direction: column;
     align-content: space-between;
