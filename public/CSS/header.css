@@ -1,0 +1,85 @@
+/*TOTAL BODY - encompasses the whole header*/
+div#header{
+    text-align: center;
+    display: inline-flex;
+    justify-content: flex-start;
+    box-shadow: 0px 3px 6px rgb(59, 36, 95);
+    width: 100%;
+    align-items: stretch;
+    background-color: rgb(93, 55, 150);
+}
+
+/*LEFT & RIGHT*/
+/*div for left and right sections*/
+div#image{
+    flex: 5%;
+    
+}
+
+/*MIDDLE*/
+/*div for middle section*/
+div#categories{
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    flex-wrap: wrap;
+    flex: 90%;
+}
+
+/*IN IMAGE DIV - LEFT*/
+img#me{
+    width:100%; height:auto;
+    padding: 10px;
+    background-color: rgb(93, 55, 150);
+}
+
+/*IN IMAGE DIV - RIGHT*/
+img#hide{
+    visibility: hidden;
+    width:100%; height:auto;
+}
+
+/*NAME TEXT IN CAT DIV- MIDDLE*/
+div#categories p{
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    display: inline-block;
+    font-family: "Lato";
+    font-display:auto;
+    font-style:normal;
+    font-weight:500;
+    font-stretch:normal;
+    text-align: center;
+}
+
+/*SELECTIONS CONTAINER - MIDDLE, BOTTOM*/
+div.containerHeader{
+    margin: 0;
+    text-align: end;
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+    gap: 25px;    
+}
+
+/*INDIVIDUAL SELECTIONS*/
+a.categoriesHeader{
+    margin: 0;
+    color: white;
+    text-decoration: none;
+    padding: 12px 40px;
+    transition: all 100ms ease-in-out;
+    border-radius: 8px;
+    font-family: "Lato";
+    font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+
+/*HOVER FOR INDV SELECTIONS*/
+a.categoriesHeader:hover{
+    background-color: blueviolet;
+    color: white;
+}
+

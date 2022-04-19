@@ -1,0 +1,24 @@
+html
+    head
+        title My Projects
+        style
+            include ../../CSS/projects.css
+        script(src = '../../JS/projectsClient.js')  
+        include ../partials/header  
+body
+    
+    p THIS IS A LIST OF ALL MY COMPLETED PROJECTS
+    div#main
+        div(onclick="location.href='/projects/algorithm-visualization'")
+            img(src="../../images/algorithm.jpg")
+            p ALGORITHM VISUALIZATION
+            img#hide(src="../../images/algorithm.jpg")
+        div 
+            //img(src="../../images/jsLogo.png")
+            img(src="../../images/nodeLogo.png")
+            p RESTAURANT ORDER WEBSITE
+            img#hide(src="../../images/nodeLogo.png")
+        div 
+            img(src="../../images/cppLogo.png")
+            p C++ PROJECT
+            img#hide(src="../../images/cppLogo.png")

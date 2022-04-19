@@ -1,0 +1,61 @@
+/*CONTAINS ALL*/
+body{
+    text-align: center;
+    background-color: rgb(230, 230, 230);
+    
+    font-family: "Lato";
+    font-display:auto;
+    font-style:normal;
+    font-weight:500;
+    font-stretch:normal;
+}
+
+/*CONTAINS ALL THE PROJECT SELECTION*/
+div#main {
+    width: 900px;
+    height: 500px;
+    margin: auto;
+    margin-top: 55px;
+    /*flex*/
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+/*INDIVIDUAL PROJECT SELECTION*/
+div#main div{
+    border:solid;
+    border-radius: 15px;
+    width: 800px; height: 45px;
+    box-shadow: 0px 3px 6px rgb(59, 36, 95);
+    transition: all 300ms ease-in-out;
+    margin: 20px; 
+    padding: 10px;
+    background-color: rgb(93, 55, 150);
+    cursor: pointer;
+    color: white;
+    font-size: 23px;
+    /*flex*/
+    flex: 1 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+div#main div:hover{
+    box-shadow: 0px 15px 30px rgb(59, 36, 95);
+    height: 55px;
+    width: 810px;
+}
+
+/*indivdual image in each selection*/
+div#main div img{
+    border:solid;
+    width:auto; 
+    height:85%;
+    border-radius: 15px;
+    background-color: rgb(230,230,230);
+    padding: 5px;
+}
+

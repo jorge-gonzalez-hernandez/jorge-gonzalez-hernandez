@@ -1,0 +1,16 @@
+{
+  "name": "portfolio-website",
+  "version": "1.0.0",
+  "description": "Website that will show projects to potential employers",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Jorge Manuel Gonzalez Hernandez",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "pug": "^3.0.2"
+  }
+}
