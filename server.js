@@ -28,5 +28,5 @@ app.get('/projects/algorithm-visualization', function (req, res, next) {res.rend
 app.get('/projects/algorithm-visualization/dijkstra-algorithm', function (req, res, next) {res.render('pages/dijkstra-algorithm'); });
 
 //This is a shorthand way of creating/initializing the HTTP server
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
 console.log("Server listening at http://localhost:3000");
