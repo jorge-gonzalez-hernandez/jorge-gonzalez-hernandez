@@ -18,6 +18,24 @@ STEPS TO RUN:
 Additions:
     - The server creates a JSON file when adding a restaurant
 	thus, reads from "./restaurants/" directory for a list of restaurants
+--------------------------------------------------------------------------------
+README 2:
+STEPS TO RUN:
+	- *in folder where server.js exists*
+	- npm init
+	- npm install express
+	- npm install pug
+	- npm install express-session
+	- npm install mongodb
+	- npm install connect-mongodb-session
+	- *run mongo daemon* -> C:\Program Files\MongoDB\Server\5.0\bin>mongod.exe
+		- Search through database -> C:\Program Files\MongoDB\Server\5.0\bin>mongo.exe
+		- database initializer -> node database-initializer.js
+	- node server.js
+
+Additions:
+	The server ends up adding a session colletion and an order collection in the a4 database
+
 © 2022 GitHub, Inc.
 Terms
 Privacy

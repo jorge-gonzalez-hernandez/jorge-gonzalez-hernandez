@@ -1,0 +1,77 @@
+.content{
+    text-align: center;
+    padding-bottom: 70px;
+    background-color: rgb(120, 144, 200);
+}
+.dropdown{
+    text-align: center;
+}
+.searchBtn{
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+}
+
+.columns {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: stretch;
+  }
+  
+.categoriesColumn {
+    flex: 20%;
+    margin: 20px;
+    background-color: aqua;
+    height:auto;
+    text-align: center;
+}
+.menuColumn {
+    flex: 50%;
+    margin: 20px;
+    background-color: aqua;
+    height:auto;
+}
+.orderColumn {
+    flex: 30%;
+    margin: 20px;
+    background-color: aqua;
+    height:auto;
+}
+a.headerClass{
+    color: purple;
+    font-family: georgia;
+    text-decoration: none;
+    padding: 20px;
+    font-size: 19px;
+}
+
+a.headerClass:hover {
+    text-decoration: underline;
+}
+  
+a.headerClass:active {
+    color: black;
+}
+  
+a.headerClass:visited {
+    color: purple;
+}
+
+
+div.headerClass{
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(134, 163, 163);
+}
+
+button#btnLogOut{
+    color: white;
+    background-color: rgb(149, 40, 40);
+    font-size: 17px;
+    font-family: georgia;
+}
+
+

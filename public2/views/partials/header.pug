@@ -1,0 +1,22 @@
+html
+    head
+        style
+            include ../../CSS/header.css
+        script(src = '../../JS/client.js')    
+
+div#header
+    a(class = "headerClass", href="/") Home
+    |
+    a(class = "headerClass", href="/users") Users
+    |
+    if !loggedin
+        a(class = "headerClass", href="/registration") Registration
+        |
+        a(class = "headerClass", href="/login") Login
+        |
+    if loggedin 
+        a(class = "headerClass", href="/orders") Order
+        |
+        a(class = "headerClass", href="/profile") Profile
+        |
+        button(id = "btnLogOut", onclick = "logout()") Log Out

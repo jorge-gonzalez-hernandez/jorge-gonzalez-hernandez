@@ -1,0 +1,15 @@
+html
+    head
+        title Users
+        style
+            //include ../../CSS/singleUser.css
+        //script(src = '../../JS/loginClient.js')
+body
+    include ../partials/header
+
+    div#main 
+        h1 Users
+
+        each user in users 
+            ul
+                a(href = '/users/' + user.username) #{user.username}

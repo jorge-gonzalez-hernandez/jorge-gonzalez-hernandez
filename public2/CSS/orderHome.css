@@ -1,0 +1,13 @@
+h1{
+    color: rgb(82, 44, 27);
+}
+
+body{
+    background-color: rgb(209, 207, 207);
+}
+
+div#main{
+    text-align: center;
+    font-family: georgia;
+    padding-top: 20px;
+}

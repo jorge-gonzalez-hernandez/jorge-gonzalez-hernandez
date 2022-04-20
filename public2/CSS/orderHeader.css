@@ -1,0 +1,33 @@
+a.headerClass {
+    color: purple;
+    font-family: georgia;
+    text-decoration: none;
+    padding: 20px;
+    font-size: 19px;
+}
+
+a.headerClass:hover {
+    text-decoration: underline;
+}
+
+a.headerClass:active {
+    color: black;
+}
+
+a.headerClass:visited {
+    color: purple;
+}
+
+
+div#header {
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(134, 163, 163);
+}
+
+button#btnLogOut {
+    color: white;
+    background-color: rgb(149, 40, 40);
+    font-size: 17px;
+    font-family: georgia;
+}

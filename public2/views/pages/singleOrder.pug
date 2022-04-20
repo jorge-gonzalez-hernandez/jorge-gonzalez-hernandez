@@ -1,0 +1,21 @@
+html
+    head
+        title Order
+        style
+            //include ../../CSS/singleOrder.css
+body
+    include ../partials/header
+
+    div#main
+        label(class = "loginLbl") #{user} place the order
+        br
+        br
+        label(class ="restName") #{order.name} was where the order was placed
+        br
+        br
+        each item in order.array 
+            ul
+                label Item Name: #{item.name}, Amount: #{item.amount}
+        br
+        br
+        label(class ="orderInfo") Subtotal: $#{order.orderInfo.subtotal}, Tax: $#{order.orderInfo.tax}, Delivery Fee: $#{order.orderInfo.delivery_fee}, Order Total: $#{order.orderInfo.orderTotal}

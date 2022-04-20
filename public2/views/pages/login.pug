@@ -1,0 +1,22 @@
+html
+    head
+        title Login
+        style
+            //include ../../CSS/login.css
+        script(src = '../../JS/loginClient.js')
+body
+    include ../partials/header
+
+    div#main
+        label(class = "loginLbl") Login
+        br
+        br
+        label Username: 
+        input(type = "text", id = "username", name = "username")
+        br
+        br
+        label Password: 
+        input(type = "text", id = "password", name = "password")
+        br
+        br
+        button(type = "button" class = "submitButton" onclick = "login()") Login

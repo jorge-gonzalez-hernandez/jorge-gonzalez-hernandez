@@ -1,0 +1,25 @@
+html
+    head
+        title User
+        style
+            //include ../../CSS/singleUser.css
+        script(src = '../../JS/userClient.js')
+body
+    include ../partials/header
+
+    div#main
+        label(class = "loginLbl") #{user.username}
+        br
+        br
+        if owner
+            label(class = "privacyLbl") Privacy Settings: 
+            div(class = "privacyDiv")
+                label Private:
+                input(type="radio", name="radioBtn", onclick="handleChange(this)", value = "private", checked = user.privacy) 
+                label Public:
+                input(type="radio", name="radioBtn", onclick="handleChange(this)", value = "public", checked = !user.privacy)
+        if orders.length != 0
+            label Orders:
+            each order in orders 
+                ul
+                    a(href = '/orders/' + order._id) #{order._id}
