@@ -48,7 +48,7 @@ router.use(express.static("other"));
 //app.get('/', function (req, res, next) {res.render('pages/home', {loggedin: req}); });
 
 router.get('/', auth, function (req, res, next) {
-    res.render('pages/home', {loggedin: req.session.loggedin}); 
+    res.render('pages/resHome', {loggedin: req.session.loggedin}); 
 });
 
 function auth(req,res,next){
@@ -717,3 +717,5 @@ let frodo = {
 
 //This should also be removed. The restaurant names should also come from the server.
 let restaurants = {"Aragorn's Orc BBQ": aragorn, "Lembas by Legolas": legolas, "Frodo's Flapjacks": frodo};
+
+module.exports = router;
