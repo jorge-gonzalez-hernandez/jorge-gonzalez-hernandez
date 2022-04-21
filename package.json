@@ -10,7 +10,10 @@
   "author": "Jorge Manuel Gonzalez Hernandez",
   "license": "ISC",
   "dependencies": {
+    "connect-mongodb-session": "^3.1.1",
     "express": "^4.17.3",
+    "express-session": "^1.17.2",
+    "mongodb": "^4.5.0",
     "pug": "^3.0.2"
   }
 }
