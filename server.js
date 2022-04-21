@@ -30,8 +30,8 @@ app.use(session({
 
 //app.use = for ANY request
 //ROUTERS
-// let restRouter = require("./restaurant-router");
-// app.use("/restaurants", restRouter);
+let restWebsiteRouter = require("./restaurant-website-router");
+app.use("/restaurant-order", restWebsiteRouter);
 // let addRestRouter = require("./add-restaurant-router");
 // app.use("/addrestaurant", addRestRouter);
 
@@ -53,8 +53,30 @@ app.get('/projects/algorithm-visualization/dijkstra-algorithm', function (req, r
 
 //THE RESTAURANT ORDER WEBSITE
 app.get('/restaurant-order', auth, function (req, res, next) {
-    res.render('pages/home', {loggedin: req.session.loggedin}); 
+    res.render('pages/resHome', {loggedin: req.session.loggedin}); 
 });
+
+function auth(req,res,next){
+    
+    if(req.session.loggedin == null){
+        req.session.loggedin = false;
+    }
+    next();
+}
+
+/*////////////////////////////////////////////////
+                LOGOUT ROUTER
+*/////////////////////////////////////////////////
+app.post('/logout', express.json(), logout);
+
+function logout(req,res,next){
+	let obj = req.body;
+    req.session.loggedin = obj.loggedin;
+    req.session.user = null;
+    res.render('pages/home', {loggedin: req.session.loggedin});
+}
+
+
 
 //This is a shorthand way of creating/initializing the HTTP server
 
