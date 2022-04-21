@@ -48,6 +48,7 @@ router.use(express.static("other"));
 //app.get('/', function (req, res, next) {res.render('pages/home', {loggedin: req}); });
 
 router.get('/', auth, function (req, res, next) {
+    console.log("you a bitch");
     res.render('pages/resHome', {loggedin: req.session.loggedin}); 
 });
 
@@ -68,7 +69,7 @@ function logout(req,res,next){
 	let obj = req.body;
     req.session.loggedin = obj.loggedin;
     req.session.user = null;
-    res.render('pages/home', {loggedin: req.session.loggedin});
+    res.render('pages/resHome', {loggedin: req.session.loggedin});
 }
 
 /*////////////////////////////////////////////////
@@ -81,7 +82,7 @@ router.post("/login", express.json(), submitLogIn);
 //renders add page
 function loadLoginPage(req,res,next){
     res.format({
-		"text/html": () => {res.render("pages/login", {loggedin: req.session.loggedin}); },
+		"text/html": () => {res.render("pages/resLogin", {loggedin: req.session.loggedin}); },
 		"application/json": () => {res.status(200).json({valid: req.validLogIn})}
 	});
 	next();
@@ -122,7 +123,7 @@ router.post("/users/:userId/changeprivacy", express.json(), changePrivacy);
 
 function renderUsersPage(req,res,next){
     res.format({
-		"text/html": () => {res.render("pages/users", {users: req.users, loggedin: req.session.loggedin}); },
+		"text/html": () => {res.render("pages/resUsers", {users: req.users, loggedin: req.session.loggedin}); },
 		"application/json": () => {res.status(200).json();}
 	});
 	next();
@@ -206,7 +207,7 @@ function loadUserOrders(req,res,next){
 
 function renderUser(req,res,next){
     res.format({
-		"text/html": () => {res.render("pages/singleUser", {user: req.user, loggedin: req.session.loggedin, owner: req.own, orders: req.orders}); },
+		"text/html": () => {res.render("pages/resSingleUser", {user: req.user, loggedin: req.session.loggedin, owner: req.own, orders: req.orders}); },
 		"application/json": () => {res.status(200).json();}
 	});
 	next();
@@ -255,7 +256,7 @@ let validReg; //holds if registration is valid
 //renders add page
 function loadRegisterPage(req,res,next){
     res.format({
-		"text/html": () => {res.render("pages/register", {loggedin: req.session.loggedin}); },
+		"text/html": () => {res.render("pages/resRegister", {loggedin: req.session.loggedin}); },
 		"application/json": () => {res.status(200).json({valid: req.validReg});}
 	});
 	next();
@@ -384,7 +385,7 @@ function renderOrder(req,res,next){
         return;
     }
 	res.format({
-		"text/html": () => {res.render("pages/singleOrder", {order: req.order, user: req.user, loggedin: req.session.loggedin}); },
+		"text/html": () => {res.render("pages/resSingleOrder", {order: req.order, user: req.user, loggedin: req.session.loggedin}); },
 		"application/json": () => {}
 	});
 	next();
@@ -419,7 +420,7 @@ function loadProfileOrders(req,res,next){
 
 function renderProfile(req,res,next){
     res.format({
-		"text/html": () => {res.render("pages/singleUser", {user: req.user, loggedin: req.session.loggedin, owner: req.own, orders: req.orders}); },
+		"text/html": () => {res.render("pages/resSingleUser", {user: req.user, loggedin: req.session.loggedin, owner: req.own, orders: req.orders}); },
 		"application/json": () => {res.status(200).json();}
 	});
 	next();

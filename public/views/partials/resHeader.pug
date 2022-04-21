@@ -1,22 +1,22 @@
 html
     head
         style
-            include ../../CSS/header.css
-        script(src = '../../JS/client.js')    
+            include ../../CSS/resHeader.css
+        script(src = '../../JS/logoutClient.js')    
 
-div#header
-    a(class = "headerClass", href="/") Home
+div#resHeader
+    a(class = "headerClass", href="/projects/restaurant-order") Home
     |
-    a(class = "headerClass", href="/users") Users
+    a(class = "headerClass", href="/projects/restaurant-order/users") Users
     |
     if !loggedin
-        a(class = "headerClass", href="/registration") Registration
+        a(class = "headerClass", href="/projects/restaurant-order/registration") Registration
         |
-        a(class = "headerClass", href="/login") Login
+        a(class = "headerClass", href="/projects/restaurant-order/login") Login
         |
     if loggedin 
-        a(class = "headerClass", href="/orders") Order
+        a(class = "headerClass", href="/projects/restaurant-order/orders") Order
         |
-        a(class = "headerClass", href="/profile") Profile
+        a(class = "headerClass", href="/projects/restaurant-order/profile") Profile
         |
         button(id = "btnLogOut", onclick = "logout()") Log Out
