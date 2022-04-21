@@ -298,7 +298,12 @@ router.post("/orders", express.json(),submitOrder);
 router.get("/orders/:orderId", findOrder, authOrder, renderOrder);
 
 function loadOrderForm(req,res,next){
-    res.sendFile(path.join(__dirname, '/order.html'));
+    res.format({
+		"text/html": () => {res.render("pages/resOrderform"/*, {loggedin: req.session.loggedin}*/); }//,
+		//"application/json": () => {res.status(200).json({valid: req.validReg});}
+	});
+	next();
+    //res.sendFile(path.join(__dirname, '/order.html'));
 }
 
 function loadRestaurants(req,res,next){

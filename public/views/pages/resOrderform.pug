@@ -2,11 +2,11 @@ html
     head
         title Order Form
         style
-            include ../../CSS/orderform.css
-        script(src = '../../JS/orderform.js')
+            include ../../CSS/resOrderform.css
+        
 body(onload = "init()")
     include ../partials/header
-    include ../partials/header
+    include ../partials/resHeader
     select(id="restaurant-select")
     br
     div(id ="info")
@@ -14,3 +14,5 @@ body(onload = "init()")
         div(class="column left", id="left")
         div(class="column middle", id="middle")
         div(class="column right", id="right")
+
+script(src = '../../JS/orderform.js')

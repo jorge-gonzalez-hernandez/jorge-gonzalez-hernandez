@@ -3,13 +3,23 @@
 }
 
 .left{
-    width: 10%;
+    width: 20%;
 }
 
 .right {
-    width: 25%;
+    width: 30%;
 }
 
 .middle {
-    width: 65%;
+    width: 50%;
+    }
+    
+    
+    
+    div#main div {
+        background-color: rgb(226, 141, 43);
+    }
+    
+    div#info {
+        background-color: aqua;
 }

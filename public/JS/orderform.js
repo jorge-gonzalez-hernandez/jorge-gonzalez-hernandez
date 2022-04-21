@@ -354,7 +354,7 @@ function selectRestaurant(){
 		document.getElementById("left").innerHTML = getCategoryHTML(currentRestaurant);
 		document.getElementById("middle").innerHTML = getMenuHTML(currentRestaurant);
 		
-		//Clear the current oder and update the order summary
+		//Clear the current order and update the order summary
 		order = {};
 		updateOrder();
 		
