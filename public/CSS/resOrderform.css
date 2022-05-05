@@ -4,22 +4,71 @@
 
 .left{
     width: 20%;
+    border-radius: 0px 0px 10px 10px;
+    text-align: center;
+    }
+    
+    .middle {
+        width: 50%;
 }
 
 .right {
     width: 30%;
 }
 
-.middle {
-    width: 50%;
-    }
-    
-    
-    
-    div#main div {
-        background-color: rgb(226, 141, 43);
-    }
-    
-    div#info {
-        background-color: aqua;
+div#main div {
+    background-color: rgb(226, 141, 43);
 }
+div#info {}
+
+div.select-restaurant {
+    border: solid;
+    text-align: center;
+    font-family: "Lato";
+    font-display: auto;
+    font-style: normal;
+    font-weight: 300;
+    font-stretch: normal;
+}
+
+div select {
+    font-size: 20px;
+    font-family: "Lato";
+    font-display: auto;
+    font-style: normal;
+    font-weight: 400;
+    font-stretch: normal;
+    margin: 10px;
+    border-radius: 3px;
+}
+
+a.categories {
+    margin: 0px;
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: all 100ms ease-in-out;
+    border-radius: 8px;
+    font-family: "Lato";
+    font-display: auto;
+    font-style: normal;
+    font-weight: 300;
+    font-stretch: normal;
+}
+a.categories:hover {
+    background-color: rgb(40, 210, 97);
+}
+.createdDiv {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+div.createdDiv a.categories {
+    margin: 3px;
+}
+
+select#restaurant-select {}

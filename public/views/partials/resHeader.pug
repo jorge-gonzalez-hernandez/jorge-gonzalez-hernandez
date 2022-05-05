@@ -4,19 +4,15 @@ html
             include ../../CSS/resHeader.css
         script(src = '../../JS/logoutClient.js')    
 
-div#resHeader
-    a(class = "headerClass", href="/projects/restaurant-order") Home
-    |
-    a(class = "headerClass", href="/projects/restaurant-order/users") Users
-    |
-    if !loggedin
-        a(class = "headerClass", href="/projects/restaurant-order/registration") Registration
-        |
-        a(class = "headerClass", href="/projects/restaurant-order/login") Login
-        |
-    if loggedin 
-        a(class = "headerClass", href="/projects/restaurant-order/orders") Order
-        |
-        a(class = "headerClass", href="/projects/restaurant-order/profile") Profile
-        |
-        button(id = "btnLogOut", onclick = "logout()") Log Out
+div#distinction
+    p 🡻🡻🡻 RESTAURANT ORDER WEBSITE 🡻🡻🡻
+    div#resHeader
+        a(href="/projects/restaurant-order") Home
+        a(href="/projects/restaurant-order/users") Users
+        if !loggedin
+            a(href="/projects/restaurant-order/registration") Registration
+            a(href="/projects/restaurant-order/login") Login
+        if loggedin 
+            a(href="/projects/restaurant-order/orders") Order
+            a(href="/projects/restaurant-order/profile") Profile
+            button(id = "btnLogOut", onclick = "logout()") Log Out

@@ -1,28 +1,58 @@
-a.headerClass {
-    color: purple;
-    font-family: georgia;
-    text-decoration: none;
-    padding: 20px;
-    font-size: 19px;
+div#distinction {
+    text-align: center;
+    border: dashed;
+    border-color: rgb(186, 144, 144);
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
 }
 
-a.headerClass:hover {
-    text-decoration: underline;
+div#distinction p {
+    background-color: brown;
+    font-family: "Lato";
+    font-display: auto;
+    font-style: normal;
+    font-weight: 500;
+    font-stretch: normal;
+    margin: 0;
 }
-
-a.headerClass:active {
-    color: black;
-}
-
-a.headerClass:visited {
-    color: purple;
-}
-
 
 div#resHeader {
     text-align: center;
     padding: 20px;
     background-color: rgb(134, 163, 163);
+    border-radius: 0px 0px 10px 10px;
+    /*flex-box*/
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+div#resHeader a {
+    color: purple;
+    font-family: "Lato";
+    font-display:auto;
+    font-style:normal;
+    font-weight:500;
+    font-stretch:normal;
+    padding: 5px 20px;
+    margin: 10px;
+    font-size: 17px;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: all 100ms ease-in-out;
+}
+
+div#resHeader a:hover {
+    background-color: rgb(161, 193, 193);
+}
+
+div#resHeader a:active {
+    color: black;
+}
+
+div#resHeader a:visited {
+    color: purple;
 }
 
 button#btnLogOut {

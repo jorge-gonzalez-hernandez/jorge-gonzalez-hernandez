@@ -7,8 +7,12 @@ div#header{
     width: 100%;
     align-items: stretch;
     background-color: rgb(93, 55, 150);
+    border: solid;
 }
 
+div#separation {
+    border: dashed;
+}
 /*LEFT & RIGHT*/
 /*div for left and right sections*/
 div#image{

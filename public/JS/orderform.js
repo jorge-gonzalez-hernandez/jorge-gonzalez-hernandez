@@ -315,19 +315,33 @@ let order = {};
 
 //Called on page load. Initialize the drop-down list, add event handlers, and default to the first restaurant.
 function init(){
-	document.getElementById("restaurant-select").innerHTML = genDropDownList();
+	//document.getElementById("restaurant-select").innerHTML = genDropDownList();
+	genDropDownList();
 	document.getElementById("restaurant-select").onchange = selectRestaurant;
 	selectRestaurant();
 }
 
 //Generate new HTML for a drop-down list containing all restaurants.
 function genDropDownList(){
-	let result = '<select name="restaurant-select" id="restaurant-select">';
+	// let result = '<select name="restaurant-select" id="restaurant-select">';
+	// result += `<>`
+	// Object.keys(restaurants).forEach(elem => {
+	// 	result += `<option value="${elem}">${elem}</option>`
+	// });
+	// result += "</select>";
+	// return result;
+	let option = document.createElement('option');
+	option.textContent = "Select a restaurant...";
+    option.value = -1;
+    document.getElementById("restaurant-select").appendChild(option);
 	Object.keys(restaurants).forEach(elem => {
-		result += `<option value="${elem}">${elem}</option>`
+		let option = document.createElement('option');
+		option.textContent = elem;
+        option.value = elem;
+		console.log(elem);
+        document.getElementById("restaurant-select").appendChild(option);
 	});
-	result += "</select>";
-	return result;
+
 }
 
 //Called when drop-down list item is changed.
@@ -339,6 +353,9 @@ function selectRestaurant(){
 		result = confirm("Are you sure you want to clear your order and switch menus?");
 	}
 	
+	if(select.options[select.selectedIndex].value == -1){
+		return;
+	}
 	//If switch is confirmed, load the new restaurant data
 	if(result){
 		//Get the selected index and set the current restaurant
@@ -371,11 +388,13 @@ function selectRestaurant(){
 //Given a restaurant object, produces HTML for the left column
 function getCategoryHTML(rest){
 	let menu = rest.menu;
-	let result = "<b>Categories<b><br>";
+	let result = "<b>Categories</b><br>";
+	result += "<div class = 'createdDiv'>";
 	Object.keys(menu).forEach(key =>{
-		result += `<a href="#${key}">${key}</a><br>`;
+		result += `<a href='#${key}', class='categories' >${key}</a>`;
 		console.log(key);
 	});
+	result += "</div>";
 	return result;
 }
 
